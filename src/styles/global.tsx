@@ -17,6 +17,7 @@ function GlobalStyles() {
           *::before,
           *::after {
             box-sizing: border-box;
+            outline-color: ${theme.colors.darker};
           }
 
           /* Remove default margin and padding */
@@ -34,6 +35,7 @@ function GlobalStyles() {
           figure,
           figcaption,
           blockquote,
+          button,
           dl,
           dd {
             margin: 0;
@@ -42,12 +44,12 @@ function GlobalStyles() {
 
           /* Set core body defaults */
           body {
+            position: relative;
             min-height: 100vh;
             scroll-behavior: smooth;
             text-rendering: optimizeSpeed;
             line-height: 1.5;
             background-color: ${theme.colors.background};
-            margin: 0 auto;
           }
 
           /* Remove list styles on ul, ol elements */

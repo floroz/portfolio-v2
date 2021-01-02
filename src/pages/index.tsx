@@ -4,10 +4,9 @@ import Hero from "../components/Hero/Hero";
 
 const Main = styled.main`
   background-color: ${(props) => props.theme.colors.background};
-  padding: ${(props) => props.theme.spacing.large};
-  margin: 0 auto;
   max-width: 120rem;
-  width: 95%;
+  ${(props) => props.theme.mixins.flexCentered}
+  ${(props) => props.theme.mixins.pageMargins}
 `;
 
 export default function Home() {

@@ -7,7 +7,10 @@ import {
   HeaderContainer,
   LogoWrapper,
   Li,
+  MenuItem,
 } from "./Header.styled";
+import { FaBars } from "react-icons/fa";
+import { theme } from "styles";
 
 function Header(): ReactElement {
   return (
@@ -27,6 +30,14 @@ function Header(): ReactElement {
             </Li>
             <Li>
               <A href="/resume.pdf">Resume</A>
+            </Li>
+            <Li>
+              <MenuItem
+                onClick={() => console.log("open menu")} // TODO
+                aria-label="Open Side Menu"
+              >
+                <FaBars fill={theme.colors.dark} />
+              </MenuItem>
             </Li>
           </Ul>
         </Nav>

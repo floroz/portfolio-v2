@@ -23,7 +23,7 @@ const Hero = (props: Props) => {
             {`Daniele \nTortora`}
           </H1>
           <P>
-            {`I am a Software Engineer who loves \nbuilding things with JavaScript`}
+            {`I am a Software Engineer who loves building things with JavaScript`}
           </P>
         </Intro>
         <div>

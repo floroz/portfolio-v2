@@ -49,7 +49,7 @@ function GlobalStyles() {
             scroll-behavior: smooth;
             text-rendering: optimizeSpeed;
             line-height: 1.5;
-            background-color: ${theme.colors.background};
+            background-color: transparent;
           }
 
           /* Remove list styles on ul, ol elements */

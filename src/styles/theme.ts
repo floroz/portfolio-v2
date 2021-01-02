@@ -39,7 +39,7 @@ const theme = {
       justify-content: center;
       align-items: center;
     `,
-    pageMargins: `margin: 0 10rem;`,
+    pagePaddings: `padding: 0 10rem;`,
   },
 };
 

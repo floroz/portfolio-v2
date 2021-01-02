@@ -11,6 +11,7 @@ export const Section = styled.section`
   grid-gap: ${(props) => props.theme.spacing.large};
   justify-items: center;
   align-items: center;
+  ${(props) => props.theme.mixins.pagePaddings}
   padding-top: 10rem;
 `;
 

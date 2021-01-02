@@ -11,10 +11,12 @@ export const HeaderContainer = styled.header`
 export const HeaderGrid = styled.div`
   display: grid;
   grid-template-columns: min-content 1fr;
-  padding: ${(props) => props.theme.spacing.large} 0;
+
   justify-content: center;
   align-items: center;
-  ${(props) => props.theme.mixins.pageMargins}
+  ${(props) => props.theme.mixins.pagePaddings}
+  padding-top: ${(props) => props.theme.spacing.large};
+  padding-bottom: ${(props) => props.theme.spacing.large};
 `;
 
 export const LogoWrapper = styled.div`

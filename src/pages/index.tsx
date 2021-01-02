@@ -1,11 +1,6 @@
 import Head from "next/head";
 import styled from "@emotion/styled";
 
-const Heading = styled.h1`
-  color: purple;
-  margin: ${({ theme }) => `${theme.spacing.large}`};
-`;
-
 export default function Home() {
   return (
     <>
@@ -13,7 +8,6 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Heading />
       <main>
         <h1>header 1</h1>
         <h2>header 2</h2>

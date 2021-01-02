@@ -19,10 +19,26 @@ const theme = {
   spacing: {
     xsmall: "0.8rem",
     small: "1.2rem",
-    medium: "1.6rem",
-    large: "2.2rem",
-    xlarge: "2.8rem",
-    xxlarge: "4rem",
+    medium: "1.8rem",
+    large: "2.4rem",
+    xlarge: "4rem",
+    xxlarge: "6rem",
+  },
+  fontFamily: {
+    primary: "'Montserrat', sans-serif;",
+    text: "'Poppins', sans-serif;",
+  },
+  fontWeight: {
+    bold: 700,
+    semibold: 600,
+    normal: 400,
+  },
+  mixins: {
+    flexCentered: `
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `,
   },
 };
 

@@ -25,6 +25,8 @@ function GlobalStyles() {
           h2,
           h3,
           h4,
+          h5,
+          h6,
           p,
           ul,
           ol,
@@ -44,17 +46,24 @@ function GlobalStyles() {
             scroll-behavior: smooth;
             text-rendering: optimizeSpeed;
             line-height: 1.5;
+            background-color: ${theme.colors.background};
+            margin: 0 auto;
           }
 
-          /* Remove list styles on ul, ol elements with a class attribute */
-          ul[class],
-          ol[class] {
+          /* Remove list styles on ul, ol elements */
+          ul,
+          ol {
             list-style: none;
           }
 
           /* A elements that don't have a class get default styles */
           a:not([class]) {
             text-decoration-skip-ink: auto;
+          }
+
+          a,
+          a:visited {
+            text-decoration: none;
           }
 
           /* Make images easier to work with */
@@ -90,40 +99,63 @@ function GlobalStyles() {
           * {
             font-size: ${theme.fontSizes.xsmall};
             color: ${theme.colors.white};
+            font-family: ${theme.fontFamily.primary};
+            font-weight: 400;
           }
 
           h1 {
             font-size: ${theme.fontSizes.xxlarge};
             color: ${theme.colors.darker};
+            font-family: ${theme.fontFamily.primary};
+            font-weight: ${theme.fontWeight.semibold};
           }
           h2 {
             font-size: ${theme.fontSizes.xlarge};
             color: ${theme.colors.darker};
+            font-family: ${theme.fontFamily.primary};
+            font-weight: ${theme.fontWeight.bold};
           }
 
           h3 {
             font-size: ${theme.fontSizes.large};
             color: ${theme.colors.dark};
+            font-family: ${theme.fontFamily.primary};
+            font-weight: ${theme.fontWeight.bold};
           }
 
           h4 {
             font-size: ${theme.fontSizes.medium};
             color: ${theme.colors.dark};
+            font-family: ${theme.fontFamily.primary};
+            font-weight: ${theme.fontWeight.bold};
           }
 
           h5 {
             font-size: ${theme.fontSizes.medium};
             color: ${theme.colors.dark};
+            font-family: ${theme.fontFamily.primary};
+            font-weight: ${theme.fontWeight.bold};
           }
 
           h6 {
             font-size: ${theme.fontSizes.small};
             color: ${theme.colors.dark};
+            font-family: ${theme.fontFamily.primary};
           }
 
           p {
             font-size: ${theme.fontSizes.text};
             color: ${theme.colors.text};
+            font-family: ${theme.fontFamily.text};
+            font-weight: ${theme.fontWeight.normal};
+          }
+
+          a,
+          a:visited {
+            font-size: ${theme.fontSizes.text};
+            color: ${theme.colors.text};
+            font-family: ${theme.fontFamily.primary};
+            font-weight: ${theme.fontWeight.normal};
           }
         `}
       />

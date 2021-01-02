@@ -10,6 +10,7 @@ import {
   ArrowDown,
 } from "./Hero.styled";
 import { FaArrowDown } from "react-icons/fa";
+import CTALink from "shared/CTALink";
 
 interface Props {}
 
@@ -25,6 +26,9 @@ const Hero = (props: Props) => {
           <P>
             {`I am a Software Engineer who loves building things with JavaScript`}
           </P>
+          <CTALink href="#contact" variant="primary" aria-label="Contact Me">
+            Contact Me
+          </CTALink>
         </Intro>
         <div>
           <ImgCircle>

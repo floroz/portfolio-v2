@@ -17,6 +17,11 @@ export const Section = styled.section`
 
 export const Intro = styled.div`
   justify-self: flex-start;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 `;
 
 export const H1 = styled.h1`
@@ -32,6 +37,7 @@ export const P = styled.p`
   color: ${(props) => props.theme.colors.text};
   font-size: ${(props) => props.theme.fontSizes.medium};
   white-space: pre-line;
+  margin-bottom: ${(props) => props.theme.spacing.large};
 `;
 
 export const Span = styled.span`

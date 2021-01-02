@@ -1,22 +1,25 @@
 import styled from "@emotion/styled";
 
 export const HeaderContainer = styled.header`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1; // to appear on top of main
+  background-color: ${(props) => props.theme.colors.background};
+  height: 7rem;
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
 `;
 
 export const HeaderGrid = styled.div`
   display: grid;
   grid-template-columns: min-content 1fr;
-
+  width: 100%;
   justify-content: center;
   align-items: center;
   ${(props) => props.theme.mixins.pagePaddings}
-  padding-top: ${(props) => props.theme.spacing.large};
-  padding-bottom: ${(props) => props.theme.spacing.large};
 `;
 
 export const LogoWrapper = styled.div`

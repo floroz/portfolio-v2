@@ -5,7 +5,7 @@ interface Props {}
 
 const About = (props: Props) => {
   return (
-    <Section>
+    <Section id="about">
       <h2>About</h2>
       <div>
         <p>Ciao!</p>

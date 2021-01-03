@@ -2,6 +2,7 @@ import { GlobalStyles, theme } from "../styles";
 import { ThemeProvider } from "@emotion/react";
 import Header from "components/Header/Header";
 import Head from "next/head";
+import { SidebarProvider } from "context/SidebarContext";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -18,9 +19,11 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
       <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <Header />
-        <Component {...pageProps} />
+        <SidebarProvider>
+          <GlobalStyles />
+          <Header />
+          <Component {...pageProps} />
+        </SidebarProvider>
       </ThemeProvider>
     </>
   );

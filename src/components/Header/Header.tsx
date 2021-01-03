@@ -5,18 +5,20 @@ import {
   Ul,
   HeaderGrid,
   HeaderContainer,
-  LogoWrapper,
+  Logo,
   Li,
   MenuItem,
 } from "./Header.styled";
 import { FaBars } from "react-icons/fa";
 import { theme } from "styles";
+import { useSidebarContext } from "context/SidebarContext";
 
 function Header(): ReactElement {
+  const { toggle } = useSidebarContext();
   return (
     <HeaderContainer>
       <HeaderGrid>
-        <LogoWrapper style={{ color: "black" }}>DT</LogoWrapper>
+        <Logo href="#home">DT</Logo>
         <Nav>
           <Ul>
             <Li>
@@ -32,10 +34,7 @@ function Header(): ReactElement {
               <A href="/resume.pdf">Resume</A>
             </Li>
             <Li>
-              <MenuItem
-                onClick={() => console.log("open menu")} // TODO
-                aria-label="Open Side Menu"
-              >
+              <MenuItem onClick={toggle} aria-label="Open Side Menu">
                 <FaBars fill={theme.colors.dark} />
               </MenuItem>
             </Li>

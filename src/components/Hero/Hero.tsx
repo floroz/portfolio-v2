@@ -12,12 +12,10 @@ import {
 import { FaArrowDown } from "react-icons/fa";
 import CTALink from "shared/CTALink";
 
-interface Props {}
-
-const Hero = (props: Props) => {
+const Hero = () => {
   return (
     <>
-      <Section>
+      <Section id="home">
         <Intro>
           <H1>
             <Span>Hello, my name is </Span>

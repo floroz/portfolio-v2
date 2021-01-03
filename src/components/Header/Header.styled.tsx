@@ -22,10 +22,11 @@ export const HeaderGrid = styled.div`
   ${(props) => props.theme.mixins.pagePaddings}
 `;
 
-export const LogoWrapper = styled.div`
+export const Logo = styled.a`
   border: 3px solid ${(props) => props.theme.colors.darker};
   padding: ${(props) => props.theme.spacing.small};
   font-weight: ${(props) => props.theme.fontWeight.bold};
+  color: ${(props) => props.theme.colors.darker};
 `;
 
 export const Nav = styled.nav`

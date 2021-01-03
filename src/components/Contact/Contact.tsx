@@ -6,6 +6,8 @@ import {
   TextInput,
   FormGroup,
   SubmitButton,
+  Form,
+  Label,
 } from "./Contact.styled";
 import Heading2 from "shared/Heading2";
 import emailjs from "emailjs-com";
@@ -17,7 +19,6 @@ const userId = process.env.NEXT_EMAIL_USERID;
 interface Props {}
 
 const Contact = (props: Props) => {
-  console.log(serviceID, templateID, userId);
   const onSubmitHandler = (event) => {
     event.preventDefault();
 
@@ -31,28 +32,23 @@ const Contact = (props: Props) => {
   return (
     <Section id="contact">
       <Heading2>Get in Touch</Heading2>
-      <form onSubmit={onSubmitHandler}>
-        <FormGroup>
-          <label htmlFor="name">Name</label>
+      <Form onSubmit={onSubmitHandler}>
+        <FormGroup style={{ gridRow: "1/2", gridColumn: "1/2" }}>
+          <Label htmlFor="name">Name</Label>
           <NameInput type="text" name="name" id="name" />
         </FormGroup>
-        <FormGroup>
-          <label htmlFor="email">Email</label>
+        <FormGroup style={{ gridRow: "1/2", gridColumn: "2/3" }}>
+          <Label htmlFor="email">Email</Label>
           <EmailInput type="email" name="email" id="email" />
         </FormGroup>
-        <FormGroup>
-          <label htmlFor="message">Message</label>
-          <TextInput
-            name="message"
-            id="message"
-            cols={30}
-            rows={10}
-          ></TextInput>
+        <FormGroup style={{ gridRow: "2/3", gridColumn: "1/3" }}>
+          <Label htmlFor="message">Message</Label>
+          <TextInput type="text" name="message" id="message"></TextInput>
         </FormGroup>
         <SubmitButton type="submit" aria-label="send message">
           Submit
         </SubmitButton>
-      </form>
+      </Form>
     </Section>
   );
 };

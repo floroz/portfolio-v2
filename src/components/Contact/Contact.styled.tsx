@@ -3,7 +3,6 @@ import styled from "@emotion/styled";
 export const Section = styled.section`
   position: relative;
   width: 100%;
-  height: 50vh;
   background-color: ${({ theme }) => theme.colors.white};
 
   ${(props) => props.theme.mixins.pagePaddings};
@@ -11,6 +10,27 @@ export const Section = styled.section`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+`;
+
+export const Form = styled.form`
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: ${(props) => props.theme.spacing.medium};
+  margin: ${(props) => props.theme.spacing.xlarge};
+`;
+
+export const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Label = styled.label`
+  ${({ theme }) => `
+    color: ${theme.colors.darker};
+    font-family: ${theme.fontFamily.text};
+    font-size: ${theme.fontSizes.small};
+`}
 `;
 
 const Input = styled.input`
@@ -23,19 +43,6 @@ const Input = styled.input`
   `}
 `;
 
-export const FormGroup = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  label {
-    ${({ theme }) => `
-    color: ${theme.colors.darker};
-    font-family: ${theme.fontFamily.text};
-    font-size: ${theme.fontSizes.small};
-  `}
-  }
-`;
-
 export const NameInput = styled(Input)``;
 export const EmailInput = styled(Input)``;
 
@@ -46,6 +53,7 @@ export const TextInput = styled.textarea`
     font-size: ${theme.fontSizes.small};
     border: 1px solid ${theme.colors.dark};
   `}
+  height: 20rem;
 `;
 
 export const SubmitButton = styled.button`
@@ -59,4 +67,6 @@ export const SubmitButton = styled.button`
     font-weight: ${fontWeight.semibold};
     border: none;
   `}
+  grid-column: 1/2;
+  grid-row: 3/4;
 `;

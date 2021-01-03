@@ -1,9 +1,9 @@
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, { Head, Main, NextScript, Html } from "next/document";
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

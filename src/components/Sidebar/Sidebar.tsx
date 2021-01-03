@@ -36,13 +36,19 @@ const Sidebar = () => {
             <Nav>
               <Ul>
                 <Li>
-                  <A href="#about">About</A>
+                  <A href="#about" onClick={toggle}>
+                    About
+                  </A>
                 </Li>
                 <Li>
-                  <A href="#work">Work</A>
+                  <A href="#work" onClick={toggle}>
+                    Work
+                  </A>
                 </Li>
                 <Li>
-                  <A href="#contact">Contact</A>
+                  <A href="#contact" onClick={toggle}>
+                    Contact
+                  </A>
                 </Li>
                 <Li>
                   <A href="/resume.pdf">Download CV</A>

@@ -26,7 +26,7 @@ const Footer = (props: Props) => {
           <FaTwitter />
         </Icon>
       </IconContainer>
-      <Copyright>Daniele Tortora &#169; | 2021</Copyright>
+      <Copyright>Daniele Tortora 2021 &#169; | London, UK</Copyright>
     </FooterStyled>
   );
 };

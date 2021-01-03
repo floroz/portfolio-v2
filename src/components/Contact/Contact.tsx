@@ -4,7 +4,6 @@ import {
   NameInput,
   EmailInput,
   TextInput,
-  FormGroup,
   SubmitButton,
   Form,
   Label,

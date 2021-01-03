@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mqMedium } from "styles";
 
 export const Section = styled.section`
   position: relative;
@@ -15,9 +16,24 @@ export const Flexbox = styled.div`
   align-items: flex-start;
   flex-direction: column;
 
-  p:last-child {
-    margin-bottom: 30rem;
+  ${({ theme: { spacing } }) => `
+    
+    p:last-of-type {
+
+    margin-bottom: ${spacing.xxlarge};
+
+    ${mqMedium(`
+      margin-bottom: ${spacing.large};
+    `)}
   }
+// TODO: I don't like this mods to the CTALink, I might come back to this.
+  a {
+    ${mqMedium(`
+      width: 100%;
+      text-align: center;
+    `)}
+  }
+    `}
 `;
 
 export const SubTitle = styled.p`

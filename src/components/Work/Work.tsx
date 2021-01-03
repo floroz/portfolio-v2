@@ -7,7 +7,7 @@ interface Props {}
 const Work = (props: Props) => {
   return (
     <Section id="work">
-      <Heading2>Work</Heading2>
+      <Heading2>My Experience</Heading2>
     </Section>
   );
 };

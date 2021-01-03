@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
           rel="stylesheet"
         />
         {/* Global site tag (gtag.js) - Google Analytics */}
-        <script
+        {/* <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-NRMJHR8YZQ"
         ></script>
@@ -32,7 +32,7 @@ function MyApp({ Component, pageProps }) {
           window.dataLayer = window.dataLayer || []; function gtag()
           {dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config',
           'G-NRMJHR8YZQ');
-        </script>
+        </script> */}
       </Head>
       <ThemeProvider theme={theme}>
         <SidebarProvider>

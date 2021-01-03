@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
 import About from "components/About/About";
+import Contact from "components/Contact/Contact";
 import Sidebar from "components/Sidebar/Sidebar";
-import { useSidebarContext } from "context/SidebarContext";
+import Work from "components/Work/Work";
+import { useSidebarContext } from "hooks/context/SidebarContext";
 import Head from "next/head";
 import Hero from "../components/Hero/Hero";
 
@@ -15,6 +17,8 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Work />
+        <Contact />
         <Sidebar />
       </main>
     </>

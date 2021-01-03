@@ -22,9 +22,9 @@ interface Props {
 
 function CTALink({ children, variant, href, ...others }: Props): ReactElement {
   return (
-    <Link {...others} href={href}>
-      <A variant={variant}>{children}</A>
-    </Link>
+    <A variant={variant} href={href}>
+      {children}
+    </A>
   );
 }
 

@@ -8,40 +8,55 @@ import {
   Logo,
   Li,
   MenuItem,
+  transitionDuration,
+  transitionConfig,
 } from "./Header.styled";
 import { FaBars } from "react-icons/fa";
 import { theme } from "styles";
-import { useSidebarContext } from "context/SidebarContext";
+import { useSidebarContext } from "hooks/context/SidebarContext";
+import { Transition } from "react-transition-group";
+import useScrollDirection from "hooks/useScrollDirection";
 
 function Header(): ReactElement {
   const { toggle } = useSidebarContext();
+  const { show: showHeader } = useScrollDirection();
+
   return (
-    <HeaderContainer>
-      <HeaderGrid>
-        <Logo href="#home">DT</Logo>
-        <Nav>
-          <Ul>
-            <Li>
-              <A href="#about">About</A>
-            </Li>
-            <Li>
-              <A href="#work">Work</A>
-            </Li>
-            <Li>
-              <A href="#contact">Contact</A>
-            </Li>
-            <Li>
-              <A href="/resume.pdf">Resume</A>
-            </Li>
-            <Li>
-              <MenuItem onClick={toggle} aria-label="Open Side Menu">
-                <FaBars fill={theme.colors.dark} />
-              </MenuItem>
-            </Li>
-          </Ul>
-        </Nav>
-      </HeaderGrid>
-    </HeaderContainer>
+    <Transition in={showHeader} timeout={transitionDuration}>
+      {(state) => (
+        <HeaderContainer
+          style={{
+            ...transitionConfig.defaultStyles,
+            ...transitionConfig.transitionStyles[state],
+          }}
+        >
+          <HeaderGrid>
+            <Logo href="#home">DT</Logo>
+            <Nav>
+              <Ul>
+                <Li>
+                  <A href="#about">About</A>
+                </Li>
+                <Li>
+                  <A href="#work">Work</A>
+                </Li>
+                <Li>
+                  <A href="#contact">Contact</A>
+                </Li>
+                <Li>
+                  <A href="/resume.pdf">Resume</A>
+                </Li>
+                <Li>
+                  <MenuItem onClick={toggle} aria-label="Open Side Menu">
+                    <FaBars fill={theme.colors.dark} />
+                  </MenuItem>
+                </Li>
+              </Ul>
+            </Nav>
+          </HeaderGrid>
+        </HeaderContainer>
+      )}
+    </Transition>
   );
 }
 

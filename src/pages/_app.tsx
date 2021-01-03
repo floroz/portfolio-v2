@@ -2,7 +2,7 @@ import { GlobalStyles, theme } from "../styles";
 import { ThemeProvider } from "@emotion/react";
 import Header from "components/Header/Header";
 import Head from "next/head";
-import { SidebarProvider } from "context/SidebarContext";
+import { SidebarProvider } from "hooks/context/SidebarContext";
 
 function MyApp({ Component, pageProps }) {
   return (

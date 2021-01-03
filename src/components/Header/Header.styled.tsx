@@ -1,5 +1,20 @@
 import styled from "@emotion/styled";
 
+export const transitionDuration = 300;
+
+export const transitionConfig = {
+  defaultStyles: {
+    transition: `all ${transitionDuration}ms ease-in-out`,
+    transform: `translate(0, 0)`,
+  },
+  transitionStyles: {
+    entering: { transform: `translate(0, -999px)` },
+    entered: { transform: `translate(0, 0)` },
+    exiting: { transform: `translate(0, 0)` },
+    exited: { transform: `translate(0, -999px)` },
+  },
+};
+
 export const HeaderContainer = styled.header`
   position: fixed;
   top: 0;

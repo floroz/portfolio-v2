@@ -1,10 +1,10 @@
 import React from "react";
 import Heading2 from "shared/Heading2";
+import CTALink from "shared/CTALink";
+
 import { Section, Text, SubTitle, Flexbox } from "./About.styled";
 
-interface Props {}
-
-const About = (props: Props) => {
+const About = () => {
   return (
     <Section id="about">
       <Flexbox>
@@ -29,6 +29,9 @@ const About = (props: Props) => {
           I am also interested in UX/UI Design, Usability Testing and User
           Research.
         </Text>
+        <CTALink variant="primary" href="/resume.pdf">
+          Download CV
+        </CTALink>
       </Flexbox>
     </Section>
   );

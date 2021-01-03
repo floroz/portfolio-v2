@@ -14,6 +14,10 @@ export const Flexbox = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
+
+  p:last-child {
+    margin-bottom: 30rem;
+  }
 `;
 
 export const SubTitle = styled.p`
@@ -22,7 +26,7 @@ export const SubTitle = styled.p`
     font-size: ${theme.fontSizes.medium};
     font-weight: ${theme.fontWeight.semibold};
     color: ${theme.colors.darker};
-    margin-bottom: ${theme.spacing.medium};
+    margin-bottom: ${theme.spacing.large};
   `}
 `;
 

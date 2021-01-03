@@ -3,7 +3,6 @@
 import React from "react";
 import { GlobalStyles, theme } from "../styles";
 import { ThemeProvider } from "@emotion/react";
-import Header from "components/Header/Header";
 import { SidebarProvider } from "hooks/context/SidebarContext";
 import { init } from "emailjs-com";
 function MyApp({ Component, pageProps }) {
@@ -15,7 +14,6 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <SidebarProvider>
           <GlobalStyles />
-          <Header />
           <Component {...pageProps} />
         </SidebarProvider>
       </ThemeProvider>

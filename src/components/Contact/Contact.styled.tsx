@@ -1,5 +1,25 @@
 import styled from "@emotion/styled";
 import { mqLarge, mqMedium } from "styles";
+import { FaSpinner, FaCheck } from "react-icons/fa";
+
+export const Spinner = styled(FaSpinner)`
+  animation: spin 0.6s linear infinite;
+  margin-left: ${(props) => props.theme.spacing.small};
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+`;
+
+export const Check = styled(FaCheck)`
+  margin-left: ${(props) => props.theme.spacing.small};
+`;
 
 export const Section = styled.section`
   position: relative;
@@ -95,7 +115,7 @@ export const TextInput = styled.textarea`
 `;
 
 export const SubmitButton = styled.button`
-  ${({ theme: { spacing, colors, fontSizes, fontWeight } }) => `
+  ${({ theme: { spacing, colors, fontSizes, fontWeight, mixins } }) => `
     padding: ${spacing.small} ${spacing.large};
     color: ${colors.white};
     background-color: ${colors.darker};
@@ -106,6 +126,7 @@ export const SubmitButton = styled.button`
     border: none;
     grid-column: 1/2;
     grid-row: 3/4;
+    ${mixins.flexCentered};
 
   ${mqLarge(`
       padding: ${spacing.small} ${spacing.medium};

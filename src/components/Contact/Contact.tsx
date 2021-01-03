@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Section,
   NameInput,
@@ -10,6 +10,8 @@ import {
   NameGroup,
   EmailGroup,
   MessageGroup,
+  Spinner,
+  Check,
 } from "./Contact.styled";
 import Heading2 from "shared/Heading2";
 import emailjs from "emailjs-com";
@@ -20,15 +22,33 @@ const userId = process.env.NEXT_EMAIL_USERID;
 
 interface Props {}
 
+enum Status {
+  idle = "idle",
+  error = "error",
+  success = "success",
+  pending = "pending",
+}
+
 const Contact = (props: Props) => {
+  const [status, setStatus] = useState<Status>(Status.idle);
+
+  const isLoading = status === Status.pending;
+  const isError = status === Status.success;
+  const isSuccess = status === Status.success;
+
   const onSubmitHandler = (event) => {
     event.preventDefault();
+
+    setStatus(Status.pending);
 
     emailjs
       .sendForm(serviceID, templateID, event.target, userId)
       .then((res) => console.log(res))
-      .catch((err) => console.log(err))
-      .finally(() => event.target.reset());
+      .catch((err) => setStatus(Status.error))
+      .finally(() => {
+        setStatus(Status.success);
+        event.target.reset();
+      });
   };
 
   return (
@@ -53,7 +73,8 @@ const Contact = (props: Props) => {
           ></TextInput>
         </MessageGroup>
         <SubmitButton type="submit" aria-label="send message">
-          Submit
+          Submit {isLoading && <Spinner />}
+          {isSuccess && <Check />}
         </SubmitButton>
       </Form>
     </Section>

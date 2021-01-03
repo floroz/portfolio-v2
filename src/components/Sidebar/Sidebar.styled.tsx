@@ -73,7 +73,7 @@ export const Logo = styled.div`
 export const Nav = styled.nav``;
 
 export const Ul = styled.ul`
-  :first-child {
+  li:first-of-type {
     border-top: 1px solid ${(props) => props.theme.colors.light};
   }
 `;

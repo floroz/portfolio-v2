@@ -8,6 +8,9 @@ const Work = (props: Props) => {
   return (
     <Section id="work">
       <Heading2>My Experience</Heading2>
+      <p style={{ margin: "5rem 0" }}>
+        This work section is a... work in progress!
+      </p>
     </Section>
   );
 };

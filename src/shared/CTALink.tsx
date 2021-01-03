@@ -1,6 +1,7 @@
 import React, { ReactElement, ReactNode } from "react";
 import Link from "next/link";
 import styled from "@emotion/styled";
+import { mqLarge } from "styles";
 
 const A = styled.a<{ variant: "primary" | "secondary" }>`
   ${({ theme: { spacing, colors, fontSizes, fontWeight }, variant }) => `
@@ -11,6 +12,11 @@ const A = styled.a<{ variant: "primary" | "secondary" }>`
     text-transform: uppercase;
     font-size: ${fontSizes.small};
     font-weight: ${fontWeight.semibold};
+
+    ${mqLarge(`
+      padding: ${spacing.small} ${spacing.medium};
+      font-size: ${fontSizes.xsmall};
+    `)}
   `}
 `;
 

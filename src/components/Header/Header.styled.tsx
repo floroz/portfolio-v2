@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mqLarge } from "styles";
 
 export const transitionDuration = 300;
 
@@ -52,6 +53,16 @@ export const Ul = styled.ul`
   ${(props) => props.theme.mixins.flexCentered};
   justify-content: flex-end;
   align-items: center;
+
+  ${mqLarge(`
+    li {
+      display: none;
+    }
+  `)}
+
+  li:last-child {
+    display: block;
+  }
 `;
 
 export const Li = styled.li`

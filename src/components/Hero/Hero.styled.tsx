@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mqMedium } from "styles";
+import { mqLarge, mqMedium, mqXLarge } from "styles";
 
 export const Section = styled.section`
   position: relative;
@@ -13,6 +13,18 @@ export const Section = styled.section`
   align-items: center;
   ${(props) => props.theme.mixins.pagePaddings}
   padding-top: 10rem;
+
+  ${({ theme }) => `
+  
+    ${mqLarge(`
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: ${theme.spacing.medium};
+    padding-bottom: 10rem;
+    padding-top: 15rem;
+  `)}
+  `}
 `;
 
 export const Intro = styled.div`
@@ -22,22 +34,12 @@ export const Intro = styled.div`
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-`;
 
-export const H1 = styled.h1`
-  color: ${(props) => props.theme.colors.darker};
-  text-transform: uppercase;
-  white-space: pre-wrap;
-  line-height: 60px;
-  letter-spacing: 7px;
-  margin-bottom: ${(props) => props.theme.spacing.xlarge};
-`;
-
-export const P = styled.p`
-  color: ${(props) => props.theme.colors.text};
-  font-size: ${(props) => props.theme.fontSizes.medium};
-  white-space: pre-line;
-  margin-bottom: ${(props) => props.theme.spacing.large};
+  ${({ theme }) => `
+    ${mqMedium(`
+        margin-bottom: ${theme.spacing.xlarge};
+      `)}
+  `}
 `;
 
 export const Span = styled.span`
@@ -49,6 +51,48 @@ export const Span = styled.span`
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: ${(props) => props.theme.spacing.large};
+
+  ${({ theme }) => `
+  
+    ${mqLarge(`
+      line-height: 10px;
+      font-size: ${theme.fontSizes.small};
+      margin-bottom: ${theme.spacing.medium};
+    `)}
+  `}
+`;
+
+export const H1 = styled.h1`
+  text-transform: uppercase;
+  white-space: pre-wrap;
+  line-height: 60px;
+  letter-spacing: 7px;
+
+  ${({ theme }) => `
+    margin-bottom: ${theme.spacing.large};
+    color: ${theme.colors.darker};
+
+    ${mqLarge(`
+    font-size: ${theme.fontSizes.xlarge};
+  `)}
+  `}
+`;
+
+export const P = styled.p`
+  ${({ theme }) => `
+  color: ${theme.colors.text};
+  font-size: ${theme.fontSizes.medium};
+  white-space: pre-line;
+  margin-bottom: ${theme.spacing.large};
+
+ ${mqLarge(`
+    max-width: 50rem;
+  `)}
+
+  ${mqMedium(`
+    max-width: 45rem;
+  `)}
+  `}
 `;
 
 export const ImgCircle = styled.div`
@@ -58,6 +102,16 @@ export const ImgCircle = styled.div`
   height: 40rem;
   border: 6px solid ${(props) => props.theme.colors.white};
   position: relative;
+
+  ${mqXLarge(`
+    width: 35rem;
+    height: 35rem;
+  `)}
+
+  ${mqLarge(`
+    width: 25rem;
+    height: 25rem;
+  `)}
 `;
 
 export const Img = styled.img`
@@ -76,6 +130,10 @@ export const ArrowDown = styled.div`
     height: 25px;
     animation: arrow 1s ease infinite;
   }
+
+  ${mqLarge(`
+    display: none;
+  `)}
 
   @keyframes arrow {
     0% {

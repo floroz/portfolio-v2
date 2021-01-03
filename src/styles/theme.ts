@@ -1,3 +1,5 @@
+import { mqMedium, mqSmall } from "./mq";
+
 const theme = {
   fontSizes: {
     xsmall: "1.4rem",
@@ -39,7 +41,17 @@ const theme = {
       justify-content: center;
       align-items: center;
     `,
-    pagePaddings: `padding: 0 10rem;`,
+    pagePaddings: `
+    padding: 0 10rem;
+
+    ${mqMedium(`
+      padding: 0 5rem;
+    `)}
+
+    ${mqSmall(`
+      padding: 0 2rem;
+    `)}
+    `,
   },
 };
 

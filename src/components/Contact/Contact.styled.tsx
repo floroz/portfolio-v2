@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { mqLarge, mqMedium } from "styles";
 
 export const Section = styled.section`
   position: relative;
@@ -18,11 +19,46 @@ export const Form = styled.form`
   grid-template-columns: 1fr 1fr;
   grid-gap: ${(props) => props.theme.spacing.medium};
   margin: ${(props) => props.theme.spacing.xlarge};
+  width: 100%;
+  max-width: 50rem;
+
+  ${mqMedium(`
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content 1fr min-content;
+  `)}
 `;
 
-export const FormGroup = styled.div`
+const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const NameGroup = styled(FormGroup)`
+  grid-row: 1/2;
+  grid-column: 1/2;
+
+  ${mqMedium(`
+    grid-row: 1/2;
+    grid-column: 1/3;
+  `)}
+`;
+export const EmailGroup = styled(FormGroup)`
+  grid-row: 1/2;
+  grid-column: 2/3;
+
+  ${mqMedium(`
+    grid-row: 2/3;
+    grid-column: 1/3;
+  `)}
+`;
+export const MessageGroup = styled(FormGroup)`
+  grid-row: 2/3;
+  grid-column: 1/3;
+
+  ${mqMedium(`
+    grid-row: 3/4;
+    grid-column: 1/3;
+  `)}
 `;
 
 export const Label = styled.label`
@@ -40,6 +76,7 @@ const Input = styled.input`
     font-size: ${theme.fontSizes.small};
     border: 1px solid ${theme.colors.dark};
     border-radius: 5px;
+    padding: ${theme.spacing.xsmall};
   `}
 `;
 
@@ -52,6 +89,7 @@ export const TextInput = styled.textarea`
     font-family: ${theme.fontFamily.text};
     font-size: ${theme.fontSizes.small};
     border: 1px solid ${theme.colors.dark};
+    padding: ${theme.spacing.xsmall};
   `}
   height: 20rem;
 `;
@@ -66,7 +104,17 @@ export const SubmitButton = styled.button`
     font-size: ${fontSizes.small};
     font-weight: ${fontWeight.semibold};
     border: none;
+    grid-column: 1/2;
+    grid-row: 3/4;
+
+  ${mqLarge(`
+      padding: ${spacing.small} ${spacing.medium};
+      font-size: ${fontSizes.xsmall};
+    `)}
+
+    ${mqMedium(`
+    grid-row: 4/5;
+    grid-column: 1/3;
+  `)}
   `}
-  grid-column: 1/2;
-  grid-row: 3/4;
 `;

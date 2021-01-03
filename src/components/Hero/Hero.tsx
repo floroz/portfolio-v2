@@ -28,11 +28,9 @@ const Hero = () => {
             Contact Me
           </CTALink>
         </Intro>
-        <div>
-          <ImgCircle>
-            <Img src="/images/profilepic.jpeg" />
-          </ImgCircle>
-        </div>
+        <ImgCircle>
+          <Img src="/images/profilepic.jpeg" />
+        </ImgCircle>
         <ArrowDown>
           <FaArrowDown />
         </ArrowDown>

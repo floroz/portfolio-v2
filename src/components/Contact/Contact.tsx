@@ -8,6 +8,9 @@ import {
   SubmitButton,
   Form,
   Label,
+  NameGroup,
+  EmailGroup,
+  MessageGroup,
 } from "./Contact.styled";
 import Heading2 from "shared/Heading2";
 import emailjs from "emailjs-com";
@@ -33,18 +36,23 @@ const Contact = (props: Props) => {
     <Section id="contact">
       <Heading2>Get in Touch</Heading2>
       <Form onSubmit={onSubmitHandler}>
-        <FormGroup style={{ gridRow: "1/2", gridColumn: "1/2" }}>
+        <NameGroup>
           <Label htmlFor="name">Name</Label>
           <NameInput type="text" name="name" id="name" />
-        </FormGroup>
-        <FormGroup style={{ gridRow: "1/2", gridColumn: "2/3" }}>
+        </NameGroup>
+        <EmailGroup>
           <Label htmlFor="email">Email</Label>
           <EmailInput type="email" name="email" id="email" />
-        </FormGroup>
-        <FormGroup style={{ gridRow: "2/3", gridColumn: "1/3" }}>
+        </EmailGroup>
+        <MessageGroup>
           <Label htmlFor="message">Message</Label>
-          <TextInput type="text" name="message" id="message"></TextInput>
-        </FormGroup>
+          <TextInput
+            cols={30}
+            rows={30}
+            name="message"
+            id="message"
+          ></TextInput>
+        </MessageGroup>
         <SubmitButton type="submit" aria-label="send message">
           Submit
         </SubmitButton>

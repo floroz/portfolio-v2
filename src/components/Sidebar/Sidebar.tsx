@@ -25,8 +25,6 @@ const Sidebar = () => {
             ...transitionConfig.defaultStyles,
             ...transitionConfig.transitionStyles[state],
           }}
-          onClick={toggle}
-          aria-label="Click on the sidebar to close it"
         >
           <CloseButton aria-label="Close sidebar">
             <CloseIcon onClick={toggle} />

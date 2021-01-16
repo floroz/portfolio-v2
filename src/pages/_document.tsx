@@ -25,6 +25,7 @@ export default class MyDocument extends Document {
           <meta name="twitter:creator" content={metadata.author} />
           <meta name="twitter:title" content={metadata.title} />
           <meta name="twitter:description" content={metadata.description} />
+          <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
           <script
             async

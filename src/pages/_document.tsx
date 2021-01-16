@@ -16,11 +16,19 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <meta name="description" content={metadata.description} />
-          <meta name="og:title" content={metadata.title} />
-          <meta name="og:description" content={metadata.description} />
-          <meta name="og:type" content="website" />
-          <meta name="og:url" content={metadata.siteUrl} />
-          <meta name="og:title" content={metadata.title} />
+          <meta name="og:title" property="og:title" content={metadata.title} />
+          <meta
+            name="og:description"
+            property="og:description"
+            content={metadata.description}
+          />
+          <meta name="og:type" property="og:type" content="website" />
+          <meta name="og:url" property="og:url" content={metadata.siteUrl} />
+          <meta
+            name="og:image"
+            property="og:image"
+            content="images/website-preview.png"
+          />
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:creator" content={metadata.author} />
           <meta name="twitter:title" content={metadata.title} />

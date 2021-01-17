@@ -15,6 +15,12 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
             rel="stylesheet"
           />
+          <link rel="canonical" href={metadata.siteUrl}></link>
+          <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1"
+          ></meta>
           <meta name="description" content={metadata.description} />
           <meta name="og:title" property="og:title" content={metadata.title} />
           <meta
@@ -33,7 +39,6 @@ export default class MyDocument extends Document {
           <meta name="twitter:creator" content={metadata.author} />
           <meta name="twitter:title" content={metadata.title} />
           <meta name="twitter:description" content={metadata.description} />
-          <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
           <script
             async

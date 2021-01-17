@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { BiGitPullRequest } from "react-icons/bi";
 import { CgGitCommit } from "react-icons/cg";
+import { mqLarge } from "styles";
 
 export const WorkExp = styled.div`
   position: relative;
@@ -11,6 +12,11 @@ export const WorkExp = styled.div`
   padding: 0 ${(props) => props.theme.spacing.xlarge};
   margin-bottom: 20px;
   overflow: hidden;
+
+  ${mqLarge(`
+    padding-right: 0;
+    padding-left:${(props) => props.theme.spacing.xlarge};
+  `)}
 `;
 
 export const PRIcon = styled(BiGitPullRequest)`

@@ -102,12 +102,12 @@ function GlobalStyles() {
           }
 
           /* typography */
-          * {
+          /* * {
             font-size: ${theme.fontSizes.xsmall};
             color: ${theme.colors.white};
             font-family: ${theme.fontFamily.primary};
             font-weight: 400;
-          }
+          } */
 
           h1 {
             font-size: ${theme.fontSizes.xxlarge};

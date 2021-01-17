@@ -81,3 +81,18 @@ export const Description = styled.p`
   white-space: pre-wrap;
   text-align: left;
 `;
+
+export const ReadMore = styled.button`
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  ${({ theme }) => `
+    font-family: ${theme.fontFamily.text};
+    font-size: ${theme.fontSizes.small};
+    font-weight: ${theme.fontWeight.normal};
+    color: ${theme.colors.darker};
+    background-color: transparent;
+    border-bottom: 1px solid ${theme.colors.darker};
+  `}
+  line-height: 15px;
+`;

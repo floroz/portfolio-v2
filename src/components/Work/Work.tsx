@@ -15,25 +15,25 @@ const Work = (props: Props) => {
             position="Frontend Engineer"
             company="tray.io"
             year="01/2021 - present"
-            description={`• Working on the migration of the Tray Documentation platform from Gatsby to Next.js. \n• Working on the Tray app and implementing new features using React, TypeScript, GraphQL, Redux.`}
+            description={`• Working on the migration of the Tray Documentation platform from Gatsby to Next.js. \n\n• Working on the Tray app and implementing new features using React, TypeScript, GraphQL, Redux.`}
           />
           <WorkItem
             position="Frontend Engineer"
             company="OVO Energy"
             year="06/2020 - 01/2021"
-            description={`• Built an interactive Map using Mapbox and React Map GL to display all the locations within UK where OVO communities have planted trees and the amount of carbon saved. \n• Developed features for web and native mobile using React, React Native, TypeScript, RxJS, Redux, styled-components. Ensured quality outputs with high test coverage using Jest, React Testing Library, Cypress and Detox, BrowserStack. \n• Implemented and contributed to the internal Design System and ensuring cross-browser compatibility, WCAG compliance, and responsive designs for all devices and screens.`}
+            description={`• Worked on the Carbon Tracker Dashboard where users can review their carbon offsetting and CO2 emissions from different sources. \n\n• Built an interactive Map using Mapbox and React Map GL to display all the locations within UK where OVO communities have planted trees and the amount of carbon saved. \n\n• Developed features for web and native mobile using React, React Native, TypeScript, RxJS, Redux, styled-components. \n\n• Ensured quality outputs with high test coverage using Jest, React Testing Library, Cypress and Detox, BrowserStack. \n\n• Implemented and contributed to the internal Design System and ensuring cross-browser compatibility, WCAG compliance, and responsive designs for all devices and screens. \n\n• Worked in a cross-functional team, contributed to Product Design, Product Roadmap, A/B Testing, and participated to User Research and Usability Analysis.`}
           />
           <WorkItem
             position="Frontend Engineer"
             company="Secret Escapes"
             year="03/2020 - 06/2020"
-            description={`• Translation of interaction and visual designs into production quality front-end experiences, using Typescript, React (hooks), Apollo Client, GraphQL, Storybook, styled components. \n• Unit and Integration Testing using Jest, enzyme and react-testing-library. \n• Implementation of React Components using internal Design Language System as a reference. \n• Helping other developers adopt modern and lean front end engineering practises. \n• Optimisation of javascript build, test and deploy cycles to ensure maximum page load and runtime performance.`}
+            description={`• Translation of interaction and visual designs into production quality front-end experiences, using Typescript, React (hooks), Apollo Client, GraphQL, Storybook, styled components. \n\n• Unit and Integration Testing using Jest, enzyme and React Testing Library. \n\n• Implementation of React Components using internal Design Language System as a reference. \n\n• Helping other developers adopt modern and lean front end engineering practises. \n\n• Optimisation of javascript build, test and deploy cycles to ensure maximum page load and runtime performance.`}
           />
           <WorkItem
             position="Frontend Developer"
             company="Noble"
             year="06/2019 - 02/2020"
-            description={`• Develop new user-facing features both for web-app and Electron applications using React, Redux, GraphQL, Apollo. \n• Migrate the codebase from class based to functional components with React Hooks. \n• Migrate style libraries from global SCSS/Bootstrap to a modern and modular style architecture using CSS Modules and CSS-in-JS. \n• Build reusable code and libraries for future use. \n• Ensure the technical feasibility of UI/UX designs.`}
+            description={`• Develop new user-facing features both for web-app and Electron applications using React, Redux, GraphQL, Apollo. \n\n• Migrate the codebase from class based to functional components with React Hooks. \n\n• Migrate style libraries from global SCSS/Bootstrap to a modern and modular style architecture using CSS Modules and CSS-in-JS. \n\n• Build reusable code and libraries for future use. \n\n• Ensure the technical feasibility of UI/UX designs.`}
           />
         </ColumnWrapper>
         <ColumnWrapper>
@@ -41,7 +41,7 @@ const Work = (props: Props) => {
             position="Junior Developer"
             company="London Borough of Hackney"
             year="12/2018 - 06/2019"
-            description={`• Designed and developed the front-end of the Developer API Hub using Angular 7, SCSS and TypeScript. \n•Test Driven Development of RESTful APIs using C# .NET Core 2.1. \n• Worked with different stakeholders and presented demos and products to large audience.`}
+            description={`• Designed and developed the front-end of the Developer API Hub using Angular 7, SCSS and TypeScript. \n\n•Test Driven Development of RESTful APIs using C# .NET Core 2.1. \n\n• Worked with different stakeholders and presented demos and products to large audience.`}
           />
           <WorkItem
             position="Project Officer"

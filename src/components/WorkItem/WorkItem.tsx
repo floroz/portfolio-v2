@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import useIconNumbers from "./use-icons-number";
 import {
   WorkExp,
   PRIcon,
@@ -8,6 +9,7 @@ import {
   Description,
   GitCommitIcon,
   GitCommitsContainer,
+  ReadMore,
 } from "./WorkItem.styled";
 
 interface Props {
@@ -39,15 +41,10 @@ const WorkItem = ({
   ...others
 }: Props) => {
   const workExpRef = useRef<HTMLDivElement>(null);
-  const [numbersOfIconsToRender, setnumbersOfIconsToRender] = useState(10);
+  const { numbersOfIconsToRender } = useIconNumbers(workExpRef);
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
-  useEffect(() => {
-    if (!workExpRef.current) {
-      return;
-    }
-
-    setnumbersOfIconsToRender(Math.round(workExpRef.current.clientHeight / 10));
-  }, []);
+  const truncatedDescription = description.slice(0, 150).concat("...");
 
   return (
     <WorkExp style={workItemStyles} {...others} ref={workExpRef}>
@@ -56,7 +53,15 @@ const WorkItem = ({
       <Position>{position}</Position>
       <Company>{company}</Company>
       <Year>{year}</Year>
-      {description ? <Description>{description}</Description> : null}
+      <Description>
+        {isDescriptionExpanded ? description : truncatedDescription}{" "}
+        <ReadMore
+          aria-label="expand section to read more"
+          onClick={() => setIsDescriptionExpanded((prev) => !prev)}
+        >
+          {isDescriptionExpanded ? null : `Read more`}
+        </ReadMore>
+      </Description>
     </WorkExp>
   );
 };

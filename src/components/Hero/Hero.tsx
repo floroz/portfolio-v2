@@ -8,6 +8,7 @@ import {
   ImgCircle,
   Intro,
   ArrowDown,
+  Link,
 } from "./Hero.styled";
 import { FaArrowDown } from "react-icons/fa";
 import CTALink from "shared/CTALink";
@@ -24,12 +25,15 @@ const Hero = () => {
           <P>
             {`I am a Software Engineer who loves building things with JavaScript`}
           </P>
-          <CTALink href="#contact" variant="primary" aria-label="Contact Me">
+          <Link href="#contact" variant="primary" aria-label="Contact Me">
             Contact Me
-          </CTALink>
+          </Link>
         </Intro>
         <ImgCircle>
-          <Img src="/images/profilepic.jpeg" />
+          <Img
+            src="/images/profilepic.jpeg"
+            alt="Daniele Tortora Software Engineer"
+          />
         </ImgCircle>
         <ArrowDown>
           <FaArrowDown />

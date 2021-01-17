@@ -1,7 +1,6 @@
 import React, { ReactElement, ReactNode } from "react";
-import Link from "next/link";
 import styled from "@emotion/styled";
-import { mqLarge } from "styles";
+import { mqLarge, mqSmall } from "styles";
 
 const A = styled.a<{ variant: "primary" | "secondary" }>`
   ${({ theme: { spacing, colors, fontSizes, fontWeight }, variant }) => `
@@ -16,6 +15,12 @@ const A = styled.a<{ variant: "primary" | "secondary" }>`
     ${mqLarge(`
       padding: ${spacing.small} ${spacing.medium};
       font-size: ${fontSizes.xsmall};
+      
+    `)}
+
+    ${mqSmall(`
+        width: 100%;
+        text-align: center;
     `)}
   `}
 `;
@@ -28,7 +33,7 @@ interface Props {
 
 function CTALink({ children, variant, href, ...others }: Props): ReactElement {
   return (
-    <A variant={variant} href={href}>
+    <A variant={variant} href={href} {...others}>
       {children}
     </A>
   );

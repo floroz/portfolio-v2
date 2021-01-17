@@ -1,5 +1,12 @@
 import styled from "@emotion/styled";
 import { mqLarge, mqMedium, mqXLarge } from "styles";
+import CTALink from "shared/CTALink";
+
+export const Link = styled(CTALink)`
+  ${mqLarge(`
+  width: 100%;
+`)}
+`;
 
 export const Section = styled.section`
   position: relative;

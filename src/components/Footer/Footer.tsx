@@ -25,10 +25,7 @@ const Footer = (props: Props) => {
           <FaGithub />
           <IconLabel id="github">GitHub</IconLabel>
         </Icon>
-        <Icon
-          href="https://twitter.com/floroz87"
-          aria-aria-labelledby="twitter"
-        >
+        <Icon href="https://twitter.com/floroz87" aria-labelledby="twitter">
           <FaTwitter />
           <IconLabel id="twitter">Twitter</IconLabel>
         </Icon>

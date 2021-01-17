@@ -4,6 +4,7 @@ import {
   Footer as FooterStyled,
   Icon,
   IconContainer,
+  IconLabel,
 } from "./Footer.styled";
 import { FaLinkedinIn, FaGithub, FaTwitter } from "react-icons/fa";
 
@@ -15,15 +16,21 @@ const Footer = (props: Props) => {
       <IconContainer>
         <Icon
           href="https://www.linkedin.com/in/danieletortora/"
-          aria-label="Linkedin profile"
+          aria-labelledby="linkedin"
         >
           <FaLinkedinIn />
+          <IconLabel id="linkedin">LinkedIn</IconLabel>
         </Icon>
-        <Icon href="https://github.com/floroz" aria-label="GitHub profile">
+        <Icon href="https://github.com/floroz" aria-labelledby="github">
           <FaGithub />
+          <IconLabel id="github">GitHub</IconLabel>
         </Icon>
-        <Icon href="https://twitter.com/floroz87" aria-label="Twitter profile">
+        <Icon
+          href="https://twitter.com/floroz87"
+          aria-aria-labelledby="twitter"
+        >
           <FaTwitter />
+          <IconLabel id="twitter">Twitter</IconLabel>
         </Icon>
       </IconContainer>
       <Copyright>Daniele Tortora 2021 &#169; | London, UK</Copyright>

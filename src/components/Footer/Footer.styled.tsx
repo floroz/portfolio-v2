@@ -35,6 +35,13 @@ export const Icon = styled.a`
   }
 `;
 
+export const IconLabel = styled.p`
+  font-family: ${(props) => props.theme.fontFamily.primary};
+  font-weight: ${(props) => props.theme.fontWeight.normal};
+  font-size: ${(props) => props.theme.fontSizes.xsmall};
+  color: ${(props) => props.theme.colors.light};
+`;
+
 export const Copyright = styled.p`
   position: absolute;
   bottom: 5px;

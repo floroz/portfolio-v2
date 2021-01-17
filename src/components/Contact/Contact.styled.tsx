@@ -115,7 +115,9 @@ export const TextInput = styled.textarea`
 `;
 
 export const SubmitButton = styled.button`
-  ${({ theme: { spacing, colors, fontSizes, fontWeight, mixins } }) => `
+  ${({
+    theme: { spacing, colors, fontSizes, fontWeight, mixins, fontFamily },
+  }) => `
     padding: ${spacing.small} ${spacing.large};
     color: ${colors.white};
     background-color: ${colors.darker};
@@ -123,6 +125,7 @@ export const SubmitButton = styled.button`
     text-transform: uppercase;
     font-size: ${fontSizes.small};
     font-weight: ${fontWeight.semibold};
+    font-family: ${fontFamily.primary};
     border: none;
     grid-column: 1/2;
     grid-row: 3/4;

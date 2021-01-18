@@ -15,7 +15,7 @@ import { FaBars } from "react-icons/fa";
 import { theme } from "styles";
 import { useSidebarContext } from "hooks/context/SidebarContext";
 import { Transition } from "react-transition-group";
-import useScrollDirection from "hooks/useScrollDirection";
+import useScrollDirection from "hooks/use-scroll-direction";
 
 function Header(): ReactElement {
   const { toggle } = useSidebarContext();

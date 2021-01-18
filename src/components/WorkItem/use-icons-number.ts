@@ -1,4 +1,5 @@
-import { useLayoutEffect, useState } from "react";
+import { useState } from "react";
+import useLayoutEffect from "hooks/use-isomorphic-layout-effect";
 
 const useIconNumbers = (parentDivRef) => {
   const [numbersOfIconsToRender, setnumbersOfIconsToRender] = useState(10);

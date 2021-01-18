@@ -9,7 +9,8 @@
     "export": "next export",
     "cypress": "cypress",
     "cypress:open": "cypress open",
-    "e2e": "start-server-and-test dev 3000 cypress:open"
+    "e2e": "start-server-and-test dev 3000 cypress:open",
+    "cypress:ci": "cypress run"
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",

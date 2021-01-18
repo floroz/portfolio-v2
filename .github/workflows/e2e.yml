@@ -1,5 +1,12 @@
 name: E2E Tests
-on: [push]
+on:
+  push:
+    branches:
+      - dev
+    pull_request:
+      types: [opened, synchronize, reopen]
+      branches:
+        - dev
 jobs:
   cypress-run:
     runs-on: ubuntu-16.04
@@ -15,7 +22,7 @@ jobs:
 
       - name: Run E2E
         run: |
-          yarn e2e
+          yarn cypress:ci
 
       - uses: actions/upload-artifact@v2
         if: always()

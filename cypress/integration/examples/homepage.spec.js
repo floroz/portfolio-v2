@@ -1,10 +1,8 @@
 /// <reference types="cypress" />
 
-context("Navigation", () => {
+context("Homepage", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000");
-    // cy.get('.navbar-nav').contains('Commands').click()
-    // cy.get('.dropdown-menu').contains('Navigation').click()
   });
 
   it("should check that nextjs loads", () => {

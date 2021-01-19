@@ -27,15 +27,17 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: stretch;
   align-items: center;
+  ${(props) => props.theme.mixins.pagePaddings}
 `;
 
 export const HeaderGrid = styled.div`
   display: grid;
   grid-template-columns: min-content 1fr;
+  margin: 0 auto;
   width: 100%;
+  max-width: 125rem;
   justify-content: center;
   align-items: center;
-  ${(props) => props.theme.mixins.pagePaddings}
 `;
 
 export const Logo = styled.a`

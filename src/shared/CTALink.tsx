@@ -15,7 +15,6 @@ const A = styled.a<{ variant: "primary" | "secondary" }>`
     ${mqLarge(`
       padding: ${spacing.small} ${spacing.medium};
       font-size: ${fontSizes.xsmall};
-      
     `)}
 
     ${mqSmall(`

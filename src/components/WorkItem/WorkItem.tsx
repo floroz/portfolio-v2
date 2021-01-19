@@ -44,7 +44,7 @@ const WorkItem = ({
   const { numbersOfIconsToRender } = useIconNumbers(workExpRef);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
-  const truncatedDescription = description.slice(0, 150).concat("...");
+  const truncatedDescription = description.slice(0, 75).concat("...");
 
   return (
     <WorkExp style={workItemStyles} {...others} ref={workExpRef}>

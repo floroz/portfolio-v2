@@ -2,6 +2,7 @@ import React from "react";
 import {
   Section,
   H1,
+  Grid,
   P,
   Span,
   Img,
@@ -17,27 +18,29 @@ const Hero = () => {
   return (
     <>
       <Section id="home">
-        <Intro>
-          <H1>
-            <Span>Hello, my name is </Span>
-            {`Daniele \nTortora`}
-          </H1>
-          <P>
-            {`I am a Software Engineer who loves building things with JavaScript`}
-          </P>
-          <Link href="#contact" variant="primary" aria-label="Contact Me">
-            Contact Me
-          </Link>
-        </Intro>
-        <ImgCircle>
-          <Img
-            src="/images/profilepic.jpeg"
-            alt="Daniele Tortora Software Engineer"
-          />
-        </ImgCircle>
-        <ArrowDown>
-          <FaArrowDown />
-        </ArrowDown>
+        <Grid>
+          <Intro>
+            <H1>
+              <Span>Hello, my name is </Span>
+              {`Daniele \nTortora`}
+            </H1>
+            <P>
+              {`I am a Software Engineer who loves building things with JavaScript`}
+            </P>
+            <Link href="#contact" variant="primary" aria-label="Contact Me">
+              Contact Me
+            </Link>
+          </Intro>
+          <ImgCircle>
+            <Img
+              src="/images/profilepic.jpeg"
+              alt="Daniele Tortora Software Engineer"
+            />
+          </ImgCircle>
+          <ArrowDown>
+            <FaArrowDown />
+          </ArrowDown>
+        </Grid>
       </Section>
     </>
   );

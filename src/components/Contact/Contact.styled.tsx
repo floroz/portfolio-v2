@@ -27,6 +27,13 @@ export const Section = styled.section`
   background-color: ${({ theme }) => theme.colors.white};
 
   ${(props) => props.theme.mixins.pagePaddings};
+`;
+
+export const Container = styled.div`
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 125rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;

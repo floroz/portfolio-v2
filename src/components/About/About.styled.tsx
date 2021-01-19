@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { mqMedium } from "styles";
+import { mqMedium, mqXLarge } from "styles";
 
 export const Section = styled.section`
   position: relative;
@@ -7,10 +7,17 @@ export const Section = styled.section`
   background-color: ${({ theme }) => theme.colors.white};
 
   ${(props) => props.theme.mixins.pagePaddings}
+  margin: 0 auto;
   margin-bottom: ${(props) => props.theme.spacing.xlarge};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Flexbox = styled.div`
+  margin: 0 auto;
+  width: 100%;
+  max-width: 125rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -20,10 +27,10 @@ export const Flexbox = styled.div`
     
     p:last-of-type {
 
-    margin-bottom: ${spacing.xxlarge};
+    margin: ${spacing.xxlarge} 0;
 
     ${mqMedium(`
-      margin-bottom: ${spacing.large};
+      margin: ${spacing.large} 0;
     `)}
   }
 // TODO: I don't like this mods to the CTALink, I might come back to this.
@@ -34,6 +41,15 @@ export const Flexbox = styled.div`
     `)}
   }
     `}
+`;
+
+export const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
 `;
 
 export const SubTitle = styled.p`
@@ -52,4 +68,5 @@ export const Text = styled.p`
     font-size: ${theme.fontSizes.small};
     margin-bottom: ${theme.spacing.small};
   `}
+  max-width: 80rem;
 `;

@@ -3,9 +3,8 @@ import { mqLarge, mqMedium, mqXLarge } from "styles";
 import CTALink from "shared/CTALink";
 
 export const Link = styled(CTALink)`
-  ${mqLarge(`
-  width: 100%;
-`)}
+  padding-left: ${(props) => props.theme.spacing.xlarge};
+  padding-right: ${(props) => props.theme.spacing.xlarge};
 `;
 
 export const Section = styled.section`
@@ -13,23 +12,34 @@ export const Section = styled.section`
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.background};
-  display: grid;
-  grid-template-columns: 1fr min-content;
-  grid-gap: ${(props) => props.theme.spacing.large};
-  justify-items: center;
-  align-items: center;
   ${(props) => props.theme.mixins.pagePaddings}
   padding-top: 10rem;
 
+  ${mqLarge(`
+    height: auto;
+    display: grid;
+    padding-bottom: 10rem;
+    padding-top: 15rem;
+  `)}
+`;
+
+export const Grid = styled.div`
+  width: 100%;
+  max-width: 125rem;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(min-content, 60rem) minmax(min-content, 60rem);
+  grid-gap: ${(props) => props.theme.spacing.large};
+  justify-items: center;
+  align-items: center;
   ${({ theme }) => `
   
     ${mqLarge(`
-    height: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: ${theme.spacing.medium};
-    padding-bottom: 10rem;
-    padding-top: 15rem;
+
   `)}
   `}
 `;
@@ -103,6 +113,7 @@ export const P = styled.p`
 `;
 
 export const ImgCircle = styled.div`
+  justify-self: flex-end;
   border-radius: 50%;
   overflow: hidden;
   width: 40rem;
@@ -116,6 +127,7 @@ export const ImgCircle = styled.div`
   `)}
 
   ${mqLarge(`
+    justify-self: center;
     width: 25rem;
     height: 25rem;
   `)}

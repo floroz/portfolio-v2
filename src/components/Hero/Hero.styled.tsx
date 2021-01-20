@@ -100,7 +100,7 @@ export const P = styled.p`
   color: ${theme.colors.text};
   font-size: ${theme.fontSizes.medium};
   white-space: pre-line;
-  margin-bottom: ${theme.spacing.large};
+  margin-bottom: ${theme.spacing.xxlarge};
 
  ${mqLarge(`
     max-width: 50rem;

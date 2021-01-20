@@ -27,7 +27,7 @@ export const Flexbox = styled.div`
     
     p:last-of-type {
 
-    margin: ${spacing.xxlarge} 0;
+    margin-bottom: ${spacing.xxlarge};
 
     ${mqMedium(`
       margin: ${spacing.large} 0;

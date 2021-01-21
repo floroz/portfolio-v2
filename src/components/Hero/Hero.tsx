@@ -5,14 +5,11 @@ import {
   Grid,
   P,
   Span,
-  Img,
-  ImgCircle,
   Intro,
   ArrowDown,
   Link,
 } from "./Hero.styled";
 import { FaArrowDown } from "react-icons/fa";
-import CTALink from "shared/CTALink";
 
 const Hero = () => {
   return (
@@ -31,12 +28,6 @@ const Hero = () => {
               Contact Me
             </Link>
           </Intro>
-          <ImgCircle>
-            <Img
-              src="/images/profilepic.jpeg"
-              alt="Daniele Tortora Software Engineer"
-            />
-          </ImgCircle>
           <ArrowDown>
             <FaArrowDown />
           </ArrowDown>

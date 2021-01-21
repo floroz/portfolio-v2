@@ -112,32 +112,6 @@ export const P = styled.p`
   `}
 `;
 
-export const ImgCircle = styled.div`
-  justify-self: flex-end;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 40rem;
-  height: 40rem;
-  border: 6px solid ${(props) => props.theme.colors.white};
-  position: relative;
-
-  ${mqXLarge(`
-    width: 35rem;
-    height: 35rem;
-  `)}
-
-  ${mqLarge(`
-    justify-self: center;
-    width: 25rem;
-    height: 25rem;
-  `)}
-`;
-
-export const Img = styled.img`
-  display: block;
-  transform: scale(1.8) translate(10px, 30px);
-`;
-
 export const ArrowDown = styled.div`
   right: 50%;
   bottom: 5%;

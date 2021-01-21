@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-import useIconNumbers from "./use-icons-number";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import {
   WorkExp,
   PRIcon,
@@ -41,10 +40,25 @@ const WorkItem = ({
   ...others
 }: Props) => {
   const workExpRef = useRef<HTMLDivElement>(null);
-  const { numbersOfIconsToRender } = useIconNumbers(workExpRef);
+  const [numbersOfIconsToRender, setnumbersOfIconsToRender] = useState(10);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
   const truncatedDescription = description.slice(0, 75).concat("...");
+
+  useLayoutEffect(() => {
+    if (!workExpRef.current) {
+      return;
+    }
+
+    setnumbersOfIconsToRender(
+      // custom formula just happens to work
+      Math.round(workExpRef.current.clientHeight / 10 + 5)
+    );
+
+    console.table({
+      numberOfIcons: workExpRef.current.clientHeight / 10 + 5,
+    });
+  }, [isDescriptionExpanded]);
 
   return (
     <WorkExp style={workItemStyles} {...others} ref={workExpRef}>

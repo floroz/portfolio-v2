@@ -48,6 +48,7 @@ export const Copyright = styled.p`
   bottom: 5px;
   left: 50%;
   transform: translate(-50%, 0);
+  white-space: nowrap;
   ${({ theme }) => `
     color: ${theme.colors.light};
     font-size: ${theme.fontSizes.xsmall};

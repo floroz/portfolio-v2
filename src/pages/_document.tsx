@@ -53,7 +53,6 @@ export default class MyDocument extends Document {
               gtag('config', '${metadata.googleAnalyticsTrackingId}');`,
             }}
           />
-          <title>Daniele Tortora | Software Engineer</title>
         </Head>
         <body>
           <Main />

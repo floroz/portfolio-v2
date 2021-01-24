@@ -29,7 +29,7 @@ export const Grid = styled.div`
   margin: 0 auto;
   height: 100%;
   display: grid;
-  grid-template-columns: minmax(min-content, 60rem) minmax(min-content, 60rem);
+  grid-template-columns: 1fr 1fr;
   grid-gap: ${(props) => props.theme.spacing.large};
   justify-items: center;
   align-items: center;
@@ -39,7 +39,6 @@ export const Grid = styled.div`
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: ${theme.spacing.medium};
-
   `)}
   `}
 `;

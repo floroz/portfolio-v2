@@ -14,6 +14,8 @@ export const Section = styled.section`
 `;
 
 export const WorkExperience = styled.div`
+  width: 100%;
+  max-width: 125rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: ${(props) => props.theme.spacing.xxlarge} 0;
@@ -24,11 +26,8 @@ export const WorkExperience = styled.div`
 `;
 
 export const ColumnWrapper = styled.div`
-  margin: 0 0;
   ${({ theme }) => `
-  ${mqXLarge(`
-    margin: 0 ${theme.spacing.xlarge};
-  `)}
+  
 
 `}
 `;

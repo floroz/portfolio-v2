@@ -15,8 +15,9 @@ export const Footer = styled.footer`
 export const IconContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 50%;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 75rem;
   padding: ${(props) => props.theme.spacing.large};
 `;
 
@@ -47,8 +48,9 @@ export const Copyright = styled.p`
   bottom: 5px;
   left: 50%;
   transform: translate(-50%, 0);
+  white-space: nowrap;
   ${({ theme }) => `
     color: ${theme.colors.light};
-    font-size: ${theme.fontSizes.small};
+    font-size: ${theme.fontSizes.xsmall};
   `}
 `;

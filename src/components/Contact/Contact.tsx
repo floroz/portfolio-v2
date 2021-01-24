@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {
   Section,
   NameInput,
+  Container,
   EmailInput,
   TextInput,
   SubmitButton,
@@ -53,30 +54,32 @@ const Contact = (props: Props) => {
 
   return (
     <Section id="contact">
-      <Heading2>Get in Touch</Heading2>
-      <Form onSubmit={onSubmitHandler}>
-        <NameGroup>
-          <Label htmlFor="name">Name</Label>
-          <NameInput type="text" name="name" id="name" />
-        </NameGroup>
-        <EmailGroup>
-          <Label htmlFor="email">Email</Label>
-          <EmailInput type="email" name="email" id="email" />
-        </EmailGroup>
-        <MessageGroup>
-          <Label htmlFor="message">Message</Label>
-          <TextInput
-            cols={30}
-            rows={30}
-            name="message"
-            id="message"
-          ></TextInput>
-        </MessageGroup>
-        <SubmitButton type="submit" aria-label="send message">
-          Submit {isLoading && <Spinner />}
-          {isSuccess && <Check />}
-        </SubmitButton>
-      </Form>
+      <Container>
+        <Heading2>Get in Touch</Heading2>
+        <Form onSubmit={onSubmitHandler}>
+          <NameGroup>
+            <Label htmlFor="name">Name</Label>
+            <NameInput type="text" name="name" id="name" />
+          </NameGroup>
+          <EmailGroup>
+            <Label htmlFor="email">Email</Label>
+            <EmailInput type="email" name="email" id="email" />
+          </EmailGroup>
+          <MessageGroup>
+            <Label htmlFor="message">Message</Label>
+            <TextInput
+              cols={30}
+              rows={30}
+              name="message"
+              id="message"
+            ></TextInput>
+          </MessageGroup>
+          <SubmitButton type="submit" aria-label="send message">
+            Submit {isLoading && <Spinner />}
+            {isSuccess && <Check />}
+          </SubmitButton>
+        </Form>
+      </Container>
     </Section>
   );
 };

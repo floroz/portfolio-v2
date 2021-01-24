@@ -30,7 +30,7 @@ const Footer = (props: Props) => {
           <IconLabel id="twitter">Twitter</IconLabel>
         </Icon>
       </IconContainer>
-      <Copyright>Daniele Tortora 2021 &#169; | London, UK</Copyright>
+      <Copyright>Daniele Tortora 2021 &#169; London, UK</Copyright>
     </FooterStyled>
   );
 };

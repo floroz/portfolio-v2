@@ -3,9 +3,8 @@ import { mqLarge, mqMedium, mqXLarge } from "styles";
 import CTALink from "shared/CTALink";
 
 export const Link = styled(CTALink)`
-  ${mqLarge(`
-  width: 100%;
-`)}
+  padding-left: ${(props) => props.theme.spacing.xlarge};
+  padding-right: ${(props) => props.theme.spacing.xlarge};
 `;
 
 export const Section = styled.section`
@@ -13,23 +12,33 @@ export const Section = styled.section`
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.background};
-  display: grid;
-  grid-template-columns: 1fr min-content;
-  grid-gap: ${(props) => props.theme.spacing.large};
-  justify-items: center;
-  align-items: center;
   ${(props) => props.theme.mixins.pagePaddings}
   padding-top: 10rem;
 
+  ${mqLarge(`
+    height: auto;
+    display: grid;
+    padding-bottom: 10rem;
+    padding-top: 15rem;
+  `)}
+`;
+
+export const Grid = styled.div`
+  width: 100%;
+  max-width: 125rem;
+  margin: 0 auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: ${(props) => props.theme.spacing.large};
+  justify-items: center;
+  align-items: center;
   ${({ theme }) => `
   
     ${mqLarge(`
-    height: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: ${theme.spacing.medium};
-    padding-bottom: 10rem;
-    padding-top: 15rem;
   `)}
   `}
 `;
@@ -90,7 +99,7 @@ export const P = styled.p`
   color: ${theme.colors.text};
   font-size: ${theme.fontSizes.medium};
   white-space: pre-line;
-  margin-bottom: ${theme.spacing.large};
+  margin-bottom: ${theme.spacing.xxlarge};
 
  ${mqLarge(`
     max-width: 50rem;
@@ -100,30 +109,6 @@ export const P = styled.p`
     max-width: 45rem;
   `)}
   `}
-`;
-
-export const ImgCircle = styled.div`
-  border-radius: 50%;
-  overflow: hidden;
-  width: 40rem;
-  height: 40rem;
-  border: 6px solid ${(props) => props.theme.colors.white};
-  position: relative;
-
-  ${mqXLarge(`
-    width: 35rem;
-    height: 35rem;
-  `)}
-
-  ${mqLarge(`
-    width: 25rem;
-    height: 25rem;
-  `)}
-`;
-
-export const Img = styled.img`
-  display: block;
-  transform: scale(1.8) translate(10px, 30px);
 `;
 
 export const ArrowDown = styled.div`

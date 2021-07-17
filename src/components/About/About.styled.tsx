@@ -33,7 +33,6 @@ export const Flexbox = styled.div`
       margin: ${spacing.large} 0;
     `)}
   }
-// TODO: I don't like this mods to the CTALink, I might come back to this.
   a {
     ${mqMedium(`
       width: 100%;

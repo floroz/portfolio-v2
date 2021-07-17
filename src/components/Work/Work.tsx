@@ -14,53 +14,47 @@ const Work = (props: Props) => {
           <WorkItem
             position="Frontend Engineer"
             company="tray.io"
-            year="01/2021 - present"
-            description={`• Working on the migration of the Tray Documentation platform from Gatsby to Next.js. \n\n• Working on the Tray app and implementing new features using React, TypeScript, GraphQL, Redux.`}
+            year="2021 - present"
+            description={`• Migrated the https://tray.io/documentation platform from Gatsby to Next.js. Improved build time (~80% faster), test coverage (~500 additional unit and integration tests ), and Google Core Web Vitals (100 SEO score on Lighthouse)\n\n• Reviewing and redesigning the frontend architecture of tray Embedded. Contributing to improving the overall code quality by migrating legacy packages into encapsulated libraries within a mono-repo using NX and yarn workspaces\n\n• Planning and delivering the new frontend interview task assignment as part of tray recruitment process\n\n• Mentoring Junior Engineers\n\n• Tech Stack: TypeScript, React, Apollo, GraphQL, Node.js, Next.js, Gatsby, Redux`}
           />
           <WorkItem
             position="Frontend Engineer"
             company="OVO Energy"
-            year="06/2020 - 01/2021"
-            description={`• Worked on the Carbon Tracker Dashboard where users can review their carbon offsetting and CO2 emissions from different sources. \n\n• Built an interactive Map using Mapbox and React Map GL to display all the locations within UK where OVO communities have planted trees and the amount of carbon saved. \n\n• Developed features for web and native mobile using React, React Native, TypeScript, RxJS, Redux, styled-components. \n\n• Ensured quality outputs with high test coverage using Jest, React Testing Library, Cypress and Detox, BrowserStack. \n\n• Implemented and contributed to the internal Design System and ensuring cross-browser compatibility, WCAG compliance, and responsive designs for all devices and screens. \n\n• Worked in a cross-functional team, contributed to Product Design, Product Roadmap, A/B Testing, and participated to User Research and Usability Analysis.`}
-          />
-          <WorkItem
-            position="Frontend Engineer"
-            company="Secret Escapes"
-            year="03/2020 - 06/2020"
-            description={`• Translation of interaction and visual designs into production quality front-end experiences, using Typescript, React (hooks), Apollo Client, GraphQL, Storybook, styled components. \n\n• Unit and Integration Testing using Jest, enzyme and React Testing Library. \n\n• Implementation of React Components using internal Design Language System as a reference. \n\n• Helping other developers adopt modern and lean front end engineering practises. \n\n• Optimisation of javascript build, test and deploy cycles to ensure maximum page load and runtime performance.`}
+            year="2020 - 2021"
+            description={`• Built an interactive map for Web, Android, and iOS using Mapbox and React Map GL to display all the locations within the UK where OVO communities have planted trees and the amount of carbon saved\n\n• Developed new features for Web, Android, and iOS on the Carbon Dashboard, a data visualization view where users can monitor their household CO2 emissions\n\n• Tech Stack: TypeScript, React, React Native, Redux, RxJS, Node.js`}
           />
           <WorkItem
             position="Frontend Developer"
             company="Noble"
-            year="06/2019 - 02/2020"
-            description={`• Develop new user-facing features both for web-app and Electron applications using React, Redux, GraphQL, Apollo. \n\n• Migrate the codebase from class based to functional components with React Hooks. \n\n• Migrate style libraries from global SCSS/Bootstrap to a modern and modular style architecture using CSS Modules and CSS-in-JS. \n\n• Build reusable code and libraries for future use. \n\n• Ensure the technical feasibility of UI/UX designs.`}
+            year="2019 - 2020"
+            description={`• Worked on Noble Vision, a Dashboard that allows analysts to view real-time threats within their network\n\n• Migrated the codebase from class-based to functional components with React Hooks; migrated style libraries from global SCSS/Bootstrap to a modern and modular style architecture using CSS Modules and CSS-in-JS\n\n• Tech Stack: JavaScript, Electron, React, Redux, GraphQL, Apollo, Node.js`}
           />
         </ColumnWrapper>
         <ColumnWrapper>
           <WorkItem
             position="Junior Developer"
             company="London Borough of Hackney"
-            year="12/2018 - 06/2019"
-            description={`• Designed and developed the front-end of the Developer API Hub using Angular 7, SCSS and TypeScript. \n\n•Test Driven Development of RESTful APIs using C# .NET Core 2.1. \n\n• Worked with different stakeholders and presented demos and products to large audience.`}
+            year="2018 - 2019"
+            description={`• Designed and developed the front-end of the Developer API Hub\n\n• Test-Driven Development of REST APIs using C# .NET Core 2.1\n\n• Tech Stack : TypeScript, Angular, C#, .NET Core`}
           />
           <WorkItem
             position="Project Officer"
             company="London Borough of Hackney"
-            year="09/2016 - 11/2018"
+            year="2016 - 2018"
             description="Planning, leading and delivering on Borough wide resident sustainment initiatives. Working with partnering services and organisations to develop and deliver awareness-raising programmes relating to resident sustainment for audiences of staff and residents."
           />
           <WorkItem
             position="Support Worker"
             company="LookAhead"
-            year="09/2016 - 11/2018"
+            year="2015 - 2016"
             description="Helped and supported vulnerable adults with a wide range of needs. Produced comprehensive and specific risk assessments/management plans. These were then regularly reviewed to minimise risk by identifying, reporting and following up any safeguarding concerns and incidents in line with policy guidelines."
           />
-          <WorkItem
+          {/* <WorkItem
             position="Assistant Psychologist"
             company="LookAhead"
-            year="09/2016 - 11/2018"
+            year="2016 - 2018"
             description="As part of my clinical training I conducted assessments and treatment to patients mainly in within personality disorder spectrums, psychosis and eating disorders, often in crisis/relapse."
-          />
+          /> */}
         </ColumnWrapper>
       </WorkExperience>
     </Section>

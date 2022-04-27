@@ -42,14 +42,20 @@ const Contact = (props: Props) => {
 
     setStatus(Status.pending);
 
-    emailjs
-      .sendForm(serviceID, templateID, event.target, userId)
-      .then((res) => console.log(res))
-      .catch((err) => setStatus(Status.error))
-      .finally(() => {
-        setStatus(Status.success);
-        event.target.reset();
-      });
+    setTimeout(() => {
+      setStatus(Status.success);
+      event.target.reset();
+    }, 1000);
+
+    // Disabling temporary email service as there have been attempts to DDoS attack
+    // emailjs
+    //   .sendForm(serviceID, templateID, event.target, userId)
+    //   .then((res) => console.log(res))
+    //   .catch((err) => setStatus(Status.error))
+    //   .finally(() => {
+    //     setStatus(Status.success);
+    //     event.target.reset();
+    //   });
   };
 
   return (
